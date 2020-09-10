@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .wrapper {
+  width: 300px;
+}
+
+body .wrapper .devices {
+  background-color: #202020;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .wrapper .devices .device label {
+  background-color: transparent;
+  border: none;
+  color: #2196f3;
+  padding: 20px;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+body .wrapper .devices .device label svg {
+  width: 2.4em;
+  height: 2.4em;
+}
+
+body .wrapper .devices .device label.active {
+  opacity: 1;
+}
+
+body .wrapper .devices .device input {
+  display: none;
+}
+
+body .wrapper .devices .device input:checked ~ label {
+  opacity: 1;
+}
+
+body .wrapper .actions-box {
+  background-color: #202020;
+  color: #fff;
+  padding: 4px 0px 25px 36px;
+}
+/*# sourceMappingURL=main.css.map */

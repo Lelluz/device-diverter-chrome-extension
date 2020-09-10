@@ -1,0 +1,45 @@
+$blue: #2196f3;
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  .wrapper {
+    width: 300px;
+    .devices {
+      background-color: #202020;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .device {
+        label {
+          background-color: transparent;
+          border: none;
+          color: $blue;
+          padding: 20px;
+          outline: none;
+          cursor: pointer;
+          opacity: 0.4;
+          svg {
+            width: 2.4em;
+            height: 2.4em;
+          }
+          &.active {
+            opacity: 1;
+          }
+        }
+        input {
+          display: none;
+          &:checked ~ label {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .actions-box {
+      background-color: #202020;
+      color: #fff;
+      padding: 4px 0px 25px 36px;
+    }
+  }
+}

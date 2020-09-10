@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <title>Device Diverter</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="devices">
+      <div class="device">
+        <input type="radio" id="desktop" name="device-input" value="desktop">
+        <label for="desktop">
+          <i class="fas fa-desktop"></i>
+        </label>
+      </div>
+      <div class="device">
+        <input type="radio" id="tablet" name="device-input" value="tablet">
+        <label for="tablet">
+          <i class="fas fa-tablet-alt"></i>
+        </label>
+      </div>
+      <div class="device">
+        <input type="radio" id="smartphone" name="device-input" value="smartphone">
+        <label for="smartphone">
+          <i class="fas fa-mobile-alt"></i>
+        </label>
+      </div>
+    </div>
+    <div class="actions-box">
+      <label class="pure-material-checkbox">
+        <input type="checkbox" class="refresh-page-check">
+        <span>Refresh on change</span>
+      </label>
+    </div>
+  </div>
+  <script src="js/fontawesome.all.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
