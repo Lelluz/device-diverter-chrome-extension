@@ -1,16 +1,28 @@
 $blue: #2196f3;
+
+.hidden {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
   user-select: none;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  background-color: #202020;
   .wrapper {
     width: 300px;
     .devices {
-      background-color: #202020;
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-around;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+      > span {
+        font-size: 16px;
+      }
       .device {
         label {
           background-color: transparent;
@@ -20,6 +32,7 @@ body {
           outline: none;
           cursor: pointer;
           opacity: 0.4;
+          transition: opacity 0.3s, transform 0.2s;
           svg {
             width: 2.4em;
             height: 2.4em;
@@ -37,7 +50,6 @@ body {
       }
     }
     .actions-box {
-      background-color: #202020;
       color: #fff;
       padding: 4px 0px 25px 36px;
     }

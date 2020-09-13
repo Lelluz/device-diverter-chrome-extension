@@ -13,29 +13,42 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
       cookieName: 'UI'
     },
     response => {
-      if (response != undefined) {
+      if (response.currentDevice !== 'no device') {
         const currentDevice = response.currentDevice
         inputDevices.forEach(deviceInput => {
           if (deviceInput.value === currentDevice) {
             deviceInput.nextElementSibling.classList.add('active')
-            handleEvents()
+            setEvents()
           }
         })
+        return
       }
+      noDeviceDetected()
     })
 })
 
-function handleEvents() {
-
+function setEvents() {
   refreshPageCheckbox.addEventListener('change', e => {
     chrome.storage.sync.set({ refreshPage: e.currentTarget.checked })
   })
 
   devices.addEventListener('click', e => {
-    inputDevices.forEach(deviceInput => {
-      deviceInput.nextElementSibling.classList.remove('active')
-    })
-    cookieSwitcher(e.target.closest('input').value)
+    const input = e.target.closest('input')
+    if (input) {
+      removeActiveDevice()
+      cookieSwitcher(input.value)
+    }
+  })
+}
+
+function noDeviceDetected() {
+  devices.innerHTML = `<span>No device detected</span>`
+  document.querySelector('.actions-box').classList.add('hidden')
+}
+
+function removeActiveDevice() {
+  inputDevices.forEach(deviceInput => {
+    deviceInput.nextElementSibling.classList.remove('active')
   })
 }
 

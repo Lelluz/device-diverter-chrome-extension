@@ -2,7 +2,6 @@
   z-index: 0;
   position: relative;
   display: inline-block;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -20,7 +19,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(33, 150, 243);
   box-shadow: none;
   outline: none;
   opacity: 0;
@@ -61,10 +60,6 @@
   border-right: none;
   border-top: none;
   transform: translate(3px, 4px) rotate(-45deg);
-}
-
-.pure-material-checkbox > input:checked,
-.pure-material-checkbox > input:indeterminate {
 }
 
 .pure-material-checkbox > input:checked + span::before,

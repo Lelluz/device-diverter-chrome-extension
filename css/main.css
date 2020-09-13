@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +9,8 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  background-color: #202020;
 }
 
 body .wrapper {
@@ -12,7 +18,6 @@ body .wrapper {
 }
 
 body .wrapper .devices {
-  background-color: #202020;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +27,13 @@ body .wrapper .devices {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+body .wrapper .devices > span {
+  font-size: 16px;
 }
 
 body .wrapper .devices .device label {
@@ -32,6 +44,10 @@ body .wrapper .devices .device label {
   outline: none;
   cursor: pointer;
   opacity: 0.4;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.2s;
+  transition: opacity 0.3s, -webkit-transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 body .wrapper .devices .device label svg {
@@ -52,7 +68,6 @@ body .wrapper .devices .device input:checked ~ label {
 }
 
 body .wrapper .actions-box {
-  background-color: #202020;
   color: #fff;
   padding: 4px 0px 25px 36px;
 }
