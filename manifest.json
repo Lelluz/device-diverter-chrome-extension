@@ -6,7 +6,7 @@
     "128": "icon.png"
   },
   "permissions": [
-    "tabs",
+    "activeTab",
     "storage",
     "cookies"
   ],

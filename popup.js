@@ -3,7 +3,7 @@ const devices = document.querySelector('.devices'),
   refreshPageCheckbox = document.querySelector('.refresh-page-check')
 
 chrome.storage.sync.get(['refreshPage'], result => {
-  refreshPageCheckbox.checked = result.refreshPage
+  refreshPageCheckbox.checked = (result.refreshPage || result.refreshPage === false) ? result.refreshPage : true
 })
 
 chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
