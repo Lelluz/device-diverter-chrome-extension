@@ -1,4 +1,4 @@
-#yDevice-switcher-chrome-extension
+# yDevice-switcher-chrome-extension
 
 https://chrome.google.com/webstore/detail/ydevice-switcher/blhpgjemehfabfpfmfbdbmdieljlmeik
 
